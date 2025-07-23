@@ -1,0 +1,15 @@
+การติดตั้ง Linorobot2 
+ทำไมต้องติดตั้ง Framwork นี้ ?
+เพราะว่า Linorobot 2 ทำหน้าที่เป็น “สะพาน” เชื่อมระหว่าง Micro-ROS กับ ROS 2 ecosystem อย่างมีโครงสร้าง มาตรฐาน และพร้อมใช้งาน ช่วยให้ไม่ต้องเริ่มจากศูนย์ และสามารถโฟกัสกับ logic หุ่นยนต์มากขึ้นแทนที่จะเสียเวลาเขียน driver และ message mapping เอง
+
+1. cd   เพื่อกลับมาที่ Path เริ่มต้น 
+2. mkdir -p host_ws/src     -p เพื่อทำการสร้าง dir ย่อยด้วยชื่อ src
+3. cd host_ws/src       เพื่อรอทำการ Clone File มาไว้ที่ Dir นี้
+4. git clone -b humble https://github.com/linorobot/linorobot2.git    ** ต้องมี -b ROS_DISTRO เพราะGithub ที่ไป Clone มี ROS หลายเวอร์ชั่นให้เลือก เราเลยจำเป็นต้องระบุด้วย **
+5. cd ..    มาที่ห้อง host_ws/ แล้วพิมพ์คำสั่ง : rosdep update  หากมี Error ให้พิมพ์คำสั่ง 2 คำสั่งล่างสุดที่แจ้ง Error
+6. ลบไฟล์ linorobot2_gazebo ทิ้งไป โดยเข้า Path ดังนี้ :  cd /host_ws/src/linorobot2/  จากนั้นคำสั่งลบคือ : rm -rf linorobot2_gazebo
+7. cd    กลับมาที่ Home ก่อน
+8. cd host_ws/    แล้ววางคำสั่งนี้ : rosdep install --from-path src --ignore-src -y --skip-keys microxrcedds_agent --skip-keys micro_ros_agent  
+เสร็จแล้วต้องขึ้นว่า #All required rosdep installed suscessfully
+9. cd ..      จนกลับมาที่ path host_ws/      
+10. colcon build       เพื่อทำการสร้าง pkg นี้ให้สมบูรณ์

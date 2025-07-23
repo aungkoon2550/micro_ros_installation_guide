@@ -1,0 +1,12 @@
+การย้ายไฟล์ Code จากเครื่อง Host ไปไว้ยัง Raspberry Pi ด้วย VScode
+
+1. เปิด Vscode ในเครื่อง Host ขึ้นมา 
+2. ไปที่ Remote Expoler แล้วคลิกที่ IP ของ Pi แล้วกด connect in new windows อยู่ข้างๆ เครื่องหมาย -->
+3. ใส่ password ของ Pi เข้าไป
+4. เมื่อเชื่อมต่อได้แล้วกด Open Folder เเล้วเลือก DIR ที่ต้องการนำไฟล์ไปวาง 
+ตัวอย่าง : /home/ubuntu-pi/ros2_ws/ แล้วกด Ok
+5. เปิดที่อยู่ไฟล์บนเครื่อง Host แล้วลากลงไปที่ Vscode เลย
+
+การย้าย / Back Up ไฟล์ Program จาก Raspberry Pi มาไว้ที่เครื่อง Host
+1. เปิด Folder ที่ต้องการ Back up ใน Raspberry Pi
+2. คลิกขวาที่ Folder นั้น หรือ File นั้น แล้วเลือกที่ Download แล้ว จะเปิดหน้า File ของเครื่อง Host เลือกเลยว่าจะ Save ไว้ที่ไหน

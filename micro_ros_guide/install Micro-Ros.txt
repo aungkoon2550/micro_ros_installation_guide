@@ -1,0 +1,23 @@
+การ install Micro-ROS-Agent
+
+ขั้นตอนที่ 1 : เข้ามาที่ เว็บไซต์ https://micro.ros.org/docs/tutorials/core/first_application_linux/
+ขั้นตอนที่ 2 : เปิด Terminal ขึ้นมาแล้วพิมพ์ echo $ROS_DISTRO  แล้วจะมี Version ของ ROS ที่เราลง
+ขั้นตอนที่ 3 : วางโค้ดลงไป : 
+mkdir microros_ws
+cd microros_ws
+git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup 
+ขั้นตอนที่ 4 : วางโค้ดนี้ลงไป : 
+sudo apt update && rosdep update
+rosdep install --from-paths src --ignore-src -y
+ขั้นตอนที่ 5 : จะมีแจ้ง Error ให้ทำการพิมพ์คำสั่งนี้ : sudo rosdep init และตามด้วย rosdep update และสุดท้าย sudo rosdep init
+ขั้นตอนที่ 6 : วางคำสั่งนี้อีกครั้ง : rosdep install --from-paths src --ignore-src -y  พอเสร็จต้องขึ้นว่า #All required rosdep installed suscessfully
+ขั้นตอนที่ 7 : วางคำสั่งนี้ : sudo apt-get install python3-pip
+ขั้นตอนที่ 8 : วางคำสั่งนี้ :
+colcon build
+source install/local_setup.bash
+ขั้นตอนที่ 9 : วางคำสั่งนี้ : ros2 run micro_ros_setup create_agent_ws.sh
+ขั้นตอนที่ 10 : วางคำสั่งนี้ลงไป : 
+ros2 run micro_ros_setup build_agent.sh
+ขั้นตอนที่ 11 : sudo gedit .bashrc
+ขั้นตอนที่ 12 : ไปที่บรรทัดต่อจาก  source /opt/ros/humble/setup.bash
+ขั้นตอนที่ 13 : วางโค้ด source ~/microros_ws/install/setup.bash      เพื่อให้สามารถรันไฟล์จาก pkg นี้ได้ทุกครั้ง

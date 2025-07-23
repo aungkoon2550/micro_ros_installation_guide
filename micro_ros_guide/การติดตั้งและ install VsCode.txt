@@ -1,0 +1,6 @@
+การติดตั้ง และ install Visual Studiocode
+
+ขั้นตอนที่ 1 : sudo apt upgrade
+ขั้นตอนที่ 2 : sudo snap install code --classic
+
+ถ้าต้องการเรียกใช้งาน VsCode ให้พิมพ์ : code . ใน Terminal

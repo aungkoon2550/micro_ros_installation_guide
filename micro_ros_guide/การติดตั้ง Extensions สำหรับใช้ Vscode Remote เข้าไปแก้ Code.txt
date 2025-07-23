@@ -1,0 +1,11 @@
+วิธีการใช้ VsCode ในการ Remote เข้าไปแก้ไข โปรแกรมใน Raspberry Pi ได้
+ขั้นตอนที่ 1 : เปิด Raspberry Pi และ Scan หา Ip เจอ
+ขั้นตอนที่ 2 : เปิด VsCode เครื่อง Host แล้วไปที่แถบ Extensions
+ขั้นตอนที่ 3 : Search หรือ ค้นหา Remote-SSH แล้วเลือก Install ได้เลย
+ขั้นตอนที่ 4 : Search หา Save as root in Remote -SSH เเล้วเลือก install
+ขั้นตอนที่ 5 : หลังจาก install เสร็จ กดที่ Remote Expoler หรือ รูปคอมพิวเตอร์แถบเครื่องมือด้านซ้าย (บน Extensions)
+ขั้นตอนที่ 6 : เอาเมาส์ไปชี้ที่ SSH แล้วจะมีเครื่องหมาย + ให้คลิกที่เครื่องหมาย +
+ขั้นตอนที่ 7 : พิมพ์ ssh ubuntu-pi(User ของ Pi)@192.168.1.115(IP ของ Pi) และกด Enter 
+ขั้นตอนที่ 8 : เลือกเก็บไฟล์ Config ไว้ที่ /home/ubuntu-pi/.ssh/config และกด Enter
+ขั้นตอนที่ 9 : หลังจากกด Enter จะมี pop up ขึ้้นมาที่มุมขวาล่าง ให้กด connect
+ขั้นตอนที่ 10 : หลังจากรอมาสักครู่ เมื่อเสร็จแล้วจะอยู่หน้า wellcome ให้กด Open folder แล้วเลือก Folder ที่ต้องการไปแก้ไข Code
