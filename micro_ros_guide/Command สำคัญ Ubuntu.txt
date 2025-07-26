@@ -1,0 +1,14 @@
+Command เพื่อ โอนย้ายไฟล์จากเครื่อง Host ไปยัง Raspberry Pi
+scp /Path/Filename.zip/ Username@192.168.1.115:/Pathที่ต้องการวาง เช่น /home/ubuntu-pi
+
+Command ที่ใช้ในการแตกไฟล์ zip 
+unzip Filename
+
+Command ในการเช็ค USB ทีต่ออยู่ 
+ls /dev/ttyUSB* หรือ ls /dev/ttyACM*
+
+Command สำหรับการ ให้ Permission สำหรับSerial Port กรณีที่เสียบอุปกรณ์แล้ว ไม่ขึ้น 
+sudo usermod -aG dialout $USER
+
+ลิ้งสำหรับลง Board Manager ESP32
+https://dl.espressif.com/dl/package_esp32_index.json
